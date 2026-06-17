@@ -1,4 +1,3 @@
-// pages/BasePage.js
 export class BasePage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -12,7 +11,6 @@ export class BasePage {
   }
 
   async navigate(path = '/') {
-    // Включаем жесткую блокировку Google Ads и рекламы перед переходом на сайт
     await this.page.route('**/*google*', route => route.abort());
     await this.page.route('**/*doubleclick*', route => route.abort());
     await this.page.route('**/*adservices*', route => route.abort());

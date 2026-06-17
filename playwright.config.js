@@ -20,7 +20,7 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        // Блокируем рекламу Google Ads, чтобы тесты не висли по таймауту
+        // Блок рекламы
         launchOptions: {
           args: ['--disable-allow-list-for-active-tab-script-sharing']
         }
